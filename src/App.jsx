@@ -7,20 +7,24 @@ import NavBar from './components/NavBar'
 import Watchlist from './components/Watchlist'
 import {Routes, Route} from 'react-router-dom'
 import WatchListContextWrapper from './context/WatchListContext'
+import { Provider } from 'react-redux'
+import store from './redux/store'
+import User from './components/User'
+import UserRedux from './components/UserRedux'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-        <NavBar/>
-        <WatchListContextWrapper>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/Watchlist" element={<Watchlist />}></Route> 
-        </Routes>
-        </WatchListContextWrapper>
-    </>
+    <Provider store={store}>
+    {/* <User/> */}
+    <UserRedux/>
+      {/* <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/watchlist" element={<WatchList />}></Route>
+      </Routes> */}
+      </Provider>
   )
 }
 
