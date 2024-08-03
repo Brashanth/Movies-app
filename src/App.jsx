@@ -18,12 +18,12 @@ function App() {
   return (
     <Provider store={store}>
     {/* <User/> */}
-    <UserRedux/>
-      {/* <NavBar />
+    {/* <UserRedux/> */}
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/watchlist" element={<WatchList />}></Route>
-      </Routes> */}
+      </Routes>
       </Provider>
   )
 }
