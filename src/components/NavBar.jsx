@@ -9,7 +9,7 @@ function NavBar() {
         </Link>
         <div className="text-2xl font-bold space-x-8">
             <Link to="/">Movies</Link>
-            <Link to="/Watchlist">Watchlist</Link>
+            <Link to="/watchlist">Watchlist</Link>
         </div>
     </div>
   )

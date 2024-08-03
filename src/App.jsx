@@ -4,19 +4,19 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Home from './components/Home'
 import NavBar from './components/NavBar'
-import Watchlist from './components/Watchlist'
+import WatchList from './components/WatchList'
 import {Routes, Route} from 'react-router-dom'
-import WatchListContextWrapper from './context/WatchListContext'
-import { Provider } from 'react-redux'
+// import WatchListContextWrapper from './context/WatchListContext'
+import Provider from './context/WatchListContext'
 import store from './redux/store'
 import User from './components/User'
 import UserRedux from './components/UserRedux'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
-    <Provider store={store}>
+    <Provider>
     {/* <User/> */}
     {/* <UserRedux/> */}
       <NavBar />
